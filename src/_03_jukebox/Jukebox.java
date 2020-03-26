@@ -3,8 +3,12 @@ package _03_jukebox;
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
  */
-
-
+//Song s = new Song("uhOh.mp3");
+//Song s1 = new Song("timeLapse.mp3");
+//Song s2 = new Song("SweetHomeAlabama.mp3");
+//JButton button = new JButton("uh oh stinky lofi hip hop");
+//JButton ela = new JButton("timeLapse");
+//JButton nokk = new JButton("SweetHomeAlabama");
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileInputStream;
@@ -26,14 +30,15 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
 public class Jukebox implements Runnable,ActionListener {
-	JFrame frame = new JFrame(); 
-	JPanel panel = new JPanel();
-	JButton b1 = new JButton();
-	JButton b2 = new JButton();
-	JButton b3 = new JButton();
 	Song s = new Song("song.mp3");
 	Song so = new Song("song2.mp3");
+	Song son = new Song("song3.mp3");
+	JButton b1 = new JButton("old town road");
+	JButton b2 = new JButton("twinkle twinkle");
+	JButton b3 = new JButton("xenogenesis");
 	public void showButton() {
+		JFrame frame = new JFrame(); 
+		JPanel panel = new JPanel();
         b1.addActionListener(this);
         b2.addActionListener(this);
         b3.addActionListener(this);
@@ -71,7 +76,21 @@ public class Jukebox implements Runnable,ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		if (arg0.getSource() == b1) {
+			so.stop();
+			son.stop();
 			s.play();
+		}
+		if(arg0.getSource() == b2) {
+			s.stop();
+			son.stop();
+			so.play();
+			
+		}
+		if(arg0.getSource() == b3) {
+			so.stop();
+			s.stop();
+			son.play();
+			
 		}
 	}
 
