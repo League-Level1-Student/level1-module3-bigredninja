@@ -32,6 +32,7 @@ public class Jukebox implements Runnable,ActionListener {
 	JButton b2 = new JButton();
 	JButton b3 = new JButton();
 	Song s = new Song("song.mp3");
+	Song so = new Song("song2.mp3");
 	public void showButton() {
         b1.addActionListener(this);
         b2.addActionListener(this);
@@ -52,7 +53,7 @@ public class Jukebox implements Runnable,ActionListener {
 
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
-		 * choose which song to play. You can use can use a different button for
+		 * choose which song to play. You can use a different button for
 		 * each song, or a picture of the album cover. When the button or album
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
