@@ -30,7 +30,7 @@ public class CowTimer {
 		 * using Thread.sleep(int milliseconds). 
 		 */
 		for (int i = minutes; i > 0;  i--) {
-			
+			System.out.println(i);
 			Thread.sleep(1000);
 		}
 		
@@ -40,6 +40,7 @@ public class CowTimer {
 		 * from freesound.org, then drag it intothe default package.
 		 */
 		playSound("moo.wav");
+		
 	}
 
 	private void playSound(String fileName) {
